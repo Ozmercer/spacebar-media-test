@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "amount": "50",
+            "prize": "Free Spins",
+            "game": "Gemix",
+            "countdown": 25
+        },
+        {
+            "amount": "100",
+            "prize": "Coins",
+            "game": "Poker Fever",
+            "countdown": 60
+        },
+        {
+            "amount": "3",
+            "prize": "Free Coupons",
+            "game": "Penguin Casino",
+            "countdown": 30
+        },
+        {
+            "amount": "100%",
+            "prize": "Match Bonus",
+            "game": "Black Jack Mania",
+            "countdown": 300
+        },
+        {
+            "amount": "25",
+            "prize": "Free Spins",
+            "game": "Roulette House",
+            "countdown": 35
+        }
+    ]
+}
