@@ -2,8 +2,8 @@
     <div class="col-12">
         <div class="card">
             <p class="title">{{prize.amount}} {{prize.prize}} <br> on {{prize.game}}</p>      
-            <div class="timer">00:25</div>
-            <button class="btn cta">Claim now</button>
+            <div class="timer">{{prize.countdown | secondsToTimer}}</div>
+            <button class="btn cta" [disabled]="prize.countdown === 0">Claim now</button>
         </div>
     </div>
 </div>

@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClaimScreenComponent } from './claim-screen/claim-screen.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SecondsToTimerPipe } from './pipes/seconds-to-timer.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClaimScreenComponent
+    ClaimScreenComponent,
+    SecondsToTimerPipe
   ],
   imports: [
     BrowserModule,
