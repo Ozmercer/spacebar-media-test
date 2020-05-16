@@ -6,7 +6,7 @@ import { Prize } from 'src/app/models/prize';
   providedIn: 'root'
 })
 export class PrizesService {
-
+  
   constructor(private http: HttpClient) { }
 
   private async getPrizes(): Promise<{data: Prize[]}> {
@@ -25,7 +25,7 @@ export class PrizesService {
     let response;
     await this.getPrizes().then(prizes => {
       const randIdx = Math.floor(Math.random() * prizes.data.length);
-      response = prizes.data[randIdx]
+        response = prizes.data[randIdx]
     });
 
     return response

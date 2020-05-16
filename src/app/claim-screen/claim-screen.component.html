@@ -1,9 +1,22 @@
-<div class="row claim" *ngIf="prize">
+<div class="row prize" *ngIf="prize">
     <div class="col-12">
-        <div class="card">
-            <p class="title">{{prize.amount}} {{prize.prize}} <br> on {{prize.game}}</p>      
-            <div class="timer">{{prize.countdown | secondsToTimer}}</div>
-            <button class="btn cta" [disabled]="prize.countdown === 0">Claim now</button>
+        <div class="card" [ngClass]="{success: prize.claimed}">
+            <p class="title" *ngIf="!prize.claimed; else claimed">
+                {{prize.amount}} {{prize.prize}} <br> on {{prize.game}}
+            </p>   
+            <ng-template #claimed>
+                <p class="title">
+                    You have {{prize.amount}} {{prize.prize}} to use now
+                </p>   
+            </ng-template>
+            <div class="timer" *ngIf="!prize.claimed">{{prize.countdown | secondsToTimer}}</div>
+            <button 
+            class="btn cta" 
+            [disabled]="prize.countdown === 0" 
+            (click)="prize.claimed = true">
+                <span *ngIf="!prize.claimed">Claim now</span>
+                <img *ngIf="prize.claimed" src="assets/icon-tick.svg" alt="tick">
+            </button>
         </div>
     </div>
 </div>
