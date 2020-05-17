@@ -9,25 +9,25 @@
         {
             "amount": "100",
             "prize": "Coins",
-            "game": "Poker Fever",
+            "game": "Candy Crush",
             "countdown": 60
         },
         {
             "amount": "3",
-            "prize": "Free Coupons",
+            "prize": "Coupons",
             "game": "Penguin Casino",
             "countdown": 130
         },
         {
             "amount": "100%",
-            "prize": "Match Bonus",
-            "game": "Black Jack Mania",
+            "prize": "Bonus",
+            "game": "Black Jack",
             "countdown": 300
         },
         {
-            "amount": "25",
-            "prize": "Free Spins",
-            "game": "Roulette House",
+            "amount": "500$",
+            "prize": "Bonus",
+            "game": "Spinner",
             "countdown": 35
         }
     ]

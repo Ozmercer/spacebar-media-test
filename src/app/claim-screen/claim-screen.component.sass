@@ -10,6 +10,7 @@
         box-shadow: 0 4px 0 0 rgba(0,0,0,0.50)
         border-radius: 4px
         width: 100%
+        max-width: 600px
         margin: 0 auto
 
         .title 
@@ -52,8 +53,14 @@
                 margin-top: 40px
 
 @media screen and (min-width: 768px) 
-    .claim .card 
+    .prize .card 
         width: 600px
         .title 
             font-size: 45px
             line-height: 50px
+
+@media screen and (max-width: 400px) 
+    .prize .card 
+        .title 
+            font-size: 32px
+            line-height: 40px
