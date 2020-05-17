@@ -3,24 +3,18 @@
         <div class="card" [ngClass]="{success: prize.claimed}">
             <p class="title" *ngIf="!prize.claimed; else claimed">
                 {{prize.amount}} {{prize.prize}} <br> on {{prize.game}}
-            </p>   
+            </p>
             <ng-template #claimed>
                 <p class="title">
                     You have {{prize.amount}} {{prize.prize}} to use now
-                </p>   
+                </p>
             </ng-template>
-            
-            <div 
-            class="timer" 
-            *ngIf="!prize.claimed" 
-            [ngClass]="{blink: !prize.countdown}">
+
+            <div class="timer" *ngIf="!prize.claimed" [ngClass]="{blink: !prize.countdown}">
                 {{prize.countdown | secondsToTimer}}
             </div>
 
-            <button 
-            class="btn cta" 
-            [disabled]="prize.countdown === 0" 
-            (click)="prize.claimed = true">
+            <button class="btn cta" [disabled]="prize.countdown === 0" (click)="prize.claimed = true">
                 <span *ngIf="!prize.claimed">Claim now</span>
                 <img *ngIf="prize.claimed" src="assets/icon-tick.svg" alt="tick">
             </button>

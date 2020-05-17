@@ -19,5 +19,5 @@ export class SecondsToTimerPipe implements PipeTransform {
 
     return `${minutes}:${seconds}`;
   }
-  
+
 }

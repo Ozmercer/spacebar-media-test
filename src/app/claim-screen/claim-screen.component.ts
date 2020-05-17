@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PrizesService } from '../services/prize/prizes.service';
 import { Prize } from '../models/prize';
-import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-claim-screen',
@@ -15,16 +14,16 @@ export class ClaimScreenComponent implements OnInit, OnDestroy {
   constructor(private prizesService: PrizesService) {
     prizesService.randomPrize().then(randomPrize => {
       this.prize = randomPrize;
-    })
-   }
+    });
+  }
 
   ngOnInit(): void {
     this.timer = setInterval(() => {
       this.prize.countdown--;
       if (!this.prize.countdown) {
-        clearInterval(this.timer)
+        clearInterval(this.timer);
       }
-    }, 1000)
+    }, 1000);
   }
 
   ngOnDestroy() {
