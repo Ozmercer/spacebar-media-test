@@ -9,7 +9,14 @@
                     You have {{prize.amount}} {{prize.prize}} to use now
                 </p>   
             </ng-template>
-            <div class="timer" *ngIf="!prize.claimed">{{prize.countdown | secondsToTimer}}</div>
+            
+            <div 
+            class="timer" 
+            *ngIf="!prize.claimed" 
+            [ngClass]="{blink: !prize.countdown}">
+                {{prize.countdown | secondsToTimer}}
+            </div>
+
             <button 
             class="btn cta" 
             [disabled]="prize.countdown === 0" 

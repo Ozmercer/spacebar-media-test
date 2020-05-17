@@ -13,14 +13,14 @@
             "countdown": 60
         },
         {
-            "amount": "3",
-            "prize": "Coupons",
+            "amount": "100%",
+            "prize": "Bonus",
             "game": "Penguin Casino",
             "countdown": 130
         },
         {
-            "amount": "100%",
-            "prize": "Bonus",
+            "amount": "3",
+            "prize": "Coupons",
             "game": "Black Jack",
             "countdown": 300
         },
