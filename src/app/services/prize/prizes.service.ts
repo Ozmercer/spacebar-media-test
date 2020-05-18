@@ -7,7 +7,7 @@ import { Prize } from 'src/app/models/prize';
 })
 export class PrizesService {
 
-  constructor(private http: HttpClient) { }
+  constructor(protected http: HttpClient) { }
 
   private async getPrizes(): Promise<{ data: Prize[] }> {
     const prizesUrl = 'assets/DB/prizes-data.json';

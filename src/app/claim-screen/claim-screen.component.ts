@@ -12,7 +12,7 @@ export class ClaimScreenComponent implements OnInit, OnDestroy {
   timer = null;
 
   constructor(private prizesService: PrizesService) {
-    prizesService.randomPrize().then(randomPrize => {
+    this.prizesService.randomPrize().then(randomPrize => {
       this.prize = randomPrize;
     });
   }
